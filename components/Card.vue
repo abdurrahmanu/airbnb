@@ -1,7 +1,7 @@
 <template>
     <div class="rounded-[13px]">
         <div class="relative">
-            <img class="rounded-[13px] h-[230px] " width="100%"  src="/img.jpg" alt="">
+            <img class="rounded-[13px]" height="120%" width="100%"  src="/img.jpg" alt="">
             <div class="absolute top-3 right-3">like</div>
             <div class="absolute top-3 left-3">guest tag</div>
         </div>
