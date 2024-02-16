@@ -1,25 +1,31 @@
 <template>
-    <div class="rounded-[13px]">
-        <div class="relative">
-            <img class="rounded-[13px]" height="120%" width="100%"  src="/img.jpg" alt="">
-            <div class="absolute top-3 right-3">like</div>
-            <div class="absolute top-3 left-3">guest tag</div>
-           <div v-for="(img, index) in imgs" :key="index" :class=[index === 2 ? "bg-blue": ""] :style="{height: index + 1 + 'px'; width: index + 1 + 'px'}" class="rounded-full absolute bottom-3 left-[50%] translate-x-[-50%]"></div>
-        </div>
-        <div class="space-y-1">
-            <div class="flex justify-between">
-                <div class="font-bold">Torino, italy</div>
-                <div>4.88</div>
+    <div class="rounded-[13px] max-w-[300px] m-auto">
+        <div class="relative group">
+            <img class="rounded-[13px] h-[250px]" width="100%"  src="/img.jpg" alt="">
+            <Icon class="absolute top-3 right-3" name="uil:heart" />
+            <div class="absolute p-1 px-2 bg-white rounded-full top-3 left-3">{{ roomDetails.isFav }}</div>
+            <div v-for="index in 5" :key="index">                
+                <Icon class="absolute bottom-3 left-[50%] translate-x-[-50%]" name="uil:circle"  color="white"/>
             </div>
-            <p>Stay with Carmela - Hosting for 8 years</p>
-            <p>Feb 14 - 19</p>
-            <p><span class="font-bold pt-1">75</span> night</p>
+            <Icon name="uil:arrow-circle-right" class="absolute top-[50%] right-4 translate-y-[-50%] group-hover:opacity-100 opacity-0" size="35px"  color="black" />
+        </div>
+        
+        <div class="space-y-[2px]">
+            <div class="flex justify-between">
+                <div class="font-semibold">{{ roomDetails.location }}</div>
+                <div><Icon name="uil:star" color="black" />{{ roomDetails.star }}</div>
+            </div>
+            <p class="text-gray-500">{{ roomDetails.stay }}</p>
+            <p class="text-gray-500">{{ roomDetails.duration }}</p>
+            <p><span class="pt-1 font-semibold">{{ roomDetails.price }}</span>night</p>
         </div>
     </div>
 </template>
 
 <script setup>
-const imgs = 5
+const props = defineProps({
+    roomDetails: Object,
+})
 </script>
 
 <style lang="scss" scoped>
