@@ -1,28 +1,26 @@
 <template>
     <div class="pt-14 bg-zinc-100">
-        <p class="px-20 pb-10 text-2xl font-semibold">Inspiration for future gateways</p>
+        <p class="px-10 pb-10 text-2xl font-semibold">Inspiration for future gateways</p>
         
-        <div class="px-20 border-b border-b-gray-300">            
-            <div class="flex space-x-6 border-b border-b-gray-300">            
-                <div @click="selectedIndex = index" :class="[selectedIndex === index ? 'border-b-black' : 'border-b-transparent']" v-for="(option, index) in options" :key="index" class="pb-4 font-semibold text-gray-700 border-b">{{ option }}</div>
+        <div class="px-10 border-b border-b-gray-300">            
+            <div class="flex items-center space-x-6 overflow-x-scroll border-b flex-nowrap border-b-gray-300 no-scrollbar">       
+                <!-- <Icon name="uil:arrow-left" />      -->
+                <div @click="selectedIndex = index" :class="[selectedIndex === index ? 'border-b-black' : 'border-b-transparent']" v-for="(option, index) in options" :key="index" class="pb-4 font-semibold text-gray-700 border-b text-nowrap">{{ option }}</div>
+                <!-- <Icon name="uil:arrow-right"/> -->
             </div>
             
-            <div class="flex space-x-28 py-14">                
-                <div v-for="i in 6" class="space-y-4">
-                    <div class="space-y-4">                    
-                        <div v-for="i in 3" :key="i" class="">
-                            <p class="font-semibold">Canmore</p>
-                            <p class="text-gray-600">Condo rentals</p>
-                        </div>
-                    </div>                
-                </div>
+            <div class="grid grid-cols-1 gap-4 py-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">                
+                <div v-for="i in 24" class="space-y-[2px]">                    
+                        <p class="font-semibold">Canmore</p>
+                        <p class="text-gray-600">Condo rentals</p>
+                </div>                
             </div>
         </div>
         
-        <div class="flex gap-20 px-20 py-10 border-b space-x-28 border-b-gray-300">
-            <div v-for="(options, value, index) in settings" :key="index" class="space-y-4">
+        <div class="flex-row px-10 border-b border-b-transparent md:flex py-7 md:space-x-28 md:border-b-gray-300">
+            <div v-for="(options, value, index) in settings" :key="index" class="py-5 space-y-4 border-b border-b-gray-300 md:border-b-0 ">
                 <div class="font-semibold">{{ value }}</div>
-                <div v-for="(option, index) in options" :key="index" class="hover:underline">{{ option }}</div>
+                <div v-for="(option, index) in options" :key="index" class="hover:underline w-fit">{{ option }}</div>
             </div>
         </div>
 
@@ -63,3 +61,14 @@ const settings = {
     'Airbnb': ['Newsroom', 'New features', 'Careers', 'Investors', 'Gift Cards', 'Airbnb.org emergency stays']
 }
 </script>
+
+<style scoped>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+</style>

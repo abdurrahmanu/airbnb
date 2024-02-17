@@ -1,5 +1,5 @@
 <template>
-    <div class="grid gap-x-6 gap-y-8 grid-cols-[repeat(auto-fill,minmax(250px,1fr))] max-w-[2250px] m-auto px-10 py-1">
+    <div class="grid gap-x-6 gap-y-8 grid-cols-[repeat(auto-fill,minmax(250px,1fr))] max-w-[2250px] m-auto px-4 sm:px-6 md:px-10 py-1">
         <Card v-for="index in 50" :key="index" :roomDetails="roomDetails"/>
     </div>
 </template>

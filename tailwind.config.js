@@ -10,7 +10,11 @@ module.exports = {
     "./loadingScreen.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'screen-md': {min: '730px'}
+      }
+    },
   },
   plugins: [],
   darkMode: 'class'
