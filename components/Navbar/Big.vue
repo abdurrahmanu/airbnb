@@ -26,7 +26,7 @@
                     
                     <nav class="rounded-full  max-w-[950px] shadow-sm shadow-gray-500 m-auto items-center relative flex">
                             <div v-for="(value, key, index) in lists" :class="{'w-[50%]' : index === 0 || index === 3, 'w-[25%]' : index === 1 || index === 2,}" class="p-2 hover:bg-gray-100 hover:rounded-full group peer">
-                                <div :class="[index === 0 ? 'border-l-0' : '']"   class="px-3 border-l group-hover:border-l-0 whitespace-nowrap peer-hover:border-l-5">                                
+                                <div :class="[index === 0 ? 'border-l-0' : '']"   class="px-3 border-l group-hover:border-l-0 whitespace-nowrap peer-hover:border-l-0">                                
                                     <p class="whitespace-nowrap">{{ key }}</p>
                                     <p class="text-gray-500 whitespace-nowrap">{{ value }}</p>
                                 </div>
@@ -138,6 +138,44 @@ const scrollerNav = {
     'Cycladic homes': 'uil:home',
     'Windmills': 'uil:home',
     'Chefs chiken': 'uil:home',
+    'Surfing': 'uil:home',
+    'Caves': 'uil:home',
+    'Tropical': 'uil:home',
+    'Iconic cities': 'uil:home',
+    'Countryside': 'uil:home',
+    'Lake front': 'uil:home',
+    'Lake': 'uil:home',
+    'A frames': 'uil:home',
+    'Mansions': 'uil:home',
+    'Farms': 'uil:home',
+    'Camping': 'uil:home',
+    'Vineyards': 'uil:home',
+    'Historical homes': 'uil:home',
+    'Luxe': 'uil:home',
+    'Golfing': 'uil:home',
+    'Hanoks': 'uil:home',
+    'Top of the world': 'uil:home',
+    'Skiing': 'uil:home',
+    'Cycladic homes': 'uil:home',
+    'Surfing': 'uil:home',
+    'Caves': 'uil:home',
+    'Tropical': 'uil:home',
+    'Iconic cities': 'uil:home',
+    'Countryside': 'uil:home',
+    'Lake front': 'uil:home',
+    'Lake': 'uil:home',
+    'A frames': 'uil:home',
+    'Mansions': 'uil:home',
+    'Farms': 'uil:home',
+    'Camping': 'uil:home',
+    'Vineyards': 'uil:home',
+    'Historical homes': 'uil:home',
+    'Luxe': 'uil:home',
+    'Golfing': 'uil:home',
+    'Hanoks': 'uil:home',
+    'Top of the world': 'uil:home',
+    'Skiing': 'uil:home',
+    'Cycladic homes': 'uil:home',
 }
 
 const scrollAtStart = ref(true)
