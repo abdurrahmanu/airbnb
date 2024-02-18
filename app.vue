@@ -1,6 +1,7 @@
 <template>
-    <div class="">        
-        <Navbar />
+    <div class="selection:bg-transparent">        
+        <NavbarBig />
+        <NavbarSmall />
         <Cards />
         <div class="py-20 pb-10 m-auto space-y-4 font-semibold text-center w-fit">                
             <p class="text-lg text-center">Continue Exploring Rooms</p>

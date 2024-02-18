@@ -12,7 +12,10 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'screen-md': {min: '730px'}
+        'screen-xs': {min: '350px'},
+        'screen-sm': {min: '550px'},
+        'screen-md': {min: '730px'},
+        'screen-lg': {min: '930px'}
       }
     },
   },

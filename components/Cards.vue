@@ -1,10 +1,13 @@
 <template>
-    <div class="grid gap-x-6 gap-y-8 grid-cols-[repeat(auto-fill,minmax(250px,1fr))] max-w-[2250px] m-auto px-4 sm:px-6 md:px-10 py-1">
-        <Card v-for="index in 50" :key="index" :roomDetails="roomDetails"/>
+    <div class="grid grid-cols-1 screen-xs:grid-cols-[repeat(auto-fill,minmax(1fr,1fr))] screen-sm:grid-cols-[repeat(auto-fill,minmax(255px,1fr))] gap-8 gap-x-2 max-w-[2250px] px-2 screen-md:px-10 py-4">
+        <Card v-for="index in 10" :key="index" :roomDetails="roomDetails"/>
+        <Card class="hidden screen-md:block" v-for="index in 10" :key="index" :roomDetails="roomDetails"/>
+        <Card class="hidden screen-lg:block" v-for="index in 20" :key="index" :roomDetails="roomDetails"/>
     </div>
 </template>
 
 <script setup>
+
 const roomDetails = {
     'location': 'Nantes, France',
     'stay': 'Stay with Golwen',
@@ -12,6 +15,5 @@ const roomDetails = {
     'duration': 'Feb 15 - 20',
     'price': '$88',
     'isFav': 'Guest Favourite',
-
 }
 </script>
